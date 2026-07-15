@@ -1,11 +1,15 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 
+const isTouchDevice = () => 'ontouchstart' in window || navigator.maxTouchPoints > 0
+
 const CustomCursor = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [isHovering, setIsHovering] = useState(false)
 
   useEffect(() => {
+    if (isTouchDevice()) return
+
     const updateMousePosition = (e) => {
       setMousePosition({ x: e.clientX, y: e.clientY })
     }
@@ -31,6 +35,8 @@ const CustomCursor = () => {
       window.removeEventListener('mouseover', handleMouseOver)
     }
   }, [])
+
+  if (isTouchDevice()) return null
 
   return (
     <>

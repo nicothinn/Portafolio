@@ -19,6 +19,7 @@ import CTA from './components/CTA'
 import Footer from './components/Footer'
 import GalaxyBackground from './components/GalaxyBackground'
 import StarField from './components/StarField'
+import CustomCursor from './components/CustomCursor'
 import SpaceSound from './components/SpaceSound'
 import WarpSpeed from './components/WarpSpeed'
 
@@ -69,6 +70,7 @@ function App() {
     <div className="min-h-screen bg-black overflow-x-hidden">
       {/* Efectos globales */}
       <StarField />
+      <CustomCursor />
       <SpaceSound />
 
       <AnimatePresence initial={false}>
