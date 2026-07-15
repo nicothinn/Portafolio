@@ -21,7 +21,7 @@ const Hero = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
+          transition={{ duration: 0.4, delay: 0.15 }}
           className="text-center"
         >
           {/* Título principal - UNA línea gigante */}
@@ -38,7 +38,7 @@ const Hero = () => {
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
+            transition={{ duration: 0.4, delay: 0.4 }}
             className="text-xl md:text-2xl text-cosmic-light max-w-3xl mx-auto mb-16 leading-relaxed tracking-wide text-pretty"
           >
             Making sense of a universe built from data.
@@ -48,7 +48,7 @@ const Hero = () => {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 1.2 }}
+            transition={{ duration: 0.4, delay: 0.6 }}
             className="mt-20"
           >
             <motion.a

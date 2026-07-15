@@ -36,7 +36,7 @@ const DataTransmission = ({ children, delay = 0 }) => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-50px' }}
         transition={{
-          duration: 0.6,
+          duration: 0.3,
           delay: delay + 0.5,
           ease: 'easeOut'
         }}

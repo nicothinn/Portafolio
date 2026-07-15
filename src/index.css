@@ -34,23 +34,12 @@ a, button {
   cursor: none;
 }
 
-/* Scrollbar personalizado */
+/* Hide scrollbar - Locomotive Scroll handles it */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 0;
+  display: none;
 }
-
-::-webkit-scrollbar-track {
-  background: #0A0B0F;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #4A7CF7;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #8B9DC3;
-}
+html { scrollbar-width: none; }
 
 /* Animaciones personalizadas */
 @keyframes float {

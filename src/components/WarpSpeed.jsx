@@ -12,7 +12,7 @@ const WarpSpeed = ({ children, index }) => {
       y: 0,
       scale: 1,
       transition: {
-        duration: 0.8,
+        duration: 0.35,
         ease: [0.25, 0.46, 0.45, 0.94],
       },
     },
@@ -21,7 +21,7 @@ const WarpSpeed = ({ children, index }) => {
       y: -50,
       scale: 0.95,
       transition: {
-        duration: 0.5,
+        duration: 0.2,
         ease: [0.55, 0.085, 0.68, 0.53],
       },
     },
@@ -44,7 +44,7 @@ const WarpSpeed = ({ children, index }) => {
             whileInView={{ opacity: [0, 1, 0], scaleX: [0, 1, 0] }}
             viewport={{ once: true, margin: '-100px' }}
             transition={{
-              duration: 1,
+              duration: 0.5,
               times: [0, 0.5, 1]
             }}
             className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-px h-32 bg-gradient-to-b from-transparent via-cosmic-blue to-transparent"
@@ -57,8 +57,8 @@ const WarpSpeed = ({ children, index }) => {
             whileInView={{ opacity: [0, 0.5, 0], scaleX: [0, 1, 0] }}
             viewport={{ once: true, margin: '-100px' }}
             transition={{
-              duration: 0.8,
-              delay: 0.1,
+              duration: 0.35,
+              delay: 0.05,
               times: [0, 0.5, 1]
             }}
             className="absolute top-0 left-1/4 transform -translate-x-1/2 -translate-y-1/2 w-px h-20 bg-gradient-to-b from-transparent via-cosmic-gray/50 to-transparent"
@@ -70,8 +70,8 @@ const WarpSpeed = ({ children, index }) => {
             whileInView={{ opacity: [0, 0.5, 0], scaleX: [0, 1, 0] }}
             viewport={{ once: true, margin: '-100px' }}
             transition={{
-              duration: 0.8,
-              delay: 0.15,
+              duration: 0.35,
+              delay: 0.08,
               times: [0, 0.5, 1]
             }}
             className="absolute top-0 right-1/4 transform translate-x-1/2 -translate-y-1/2 w-px h-20 bg-gradient-to-b from-transparent via-cosmic-gray/50 to-transparent"

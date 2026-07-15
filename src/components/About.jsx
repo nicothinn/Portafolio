@@ -37,7 +37,7 @@ const About = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.3 }}
           className="text-center mb-20"
         >
           <h2 className="text-4xl md:text-6xl font-display font-bold mb-6 tracking-[0.1em] uppercase text-balance">
@@ -51,7 +51,7 @@ const About = () => {
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.3 }}
             className="space-y-6"
           >
             <p className="text-lg text-cosmic-light leading-relaxed font-light tracking-wide">
@@ -84,7 +84,7 @@ const About = () => {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.3 }}
             className="relative group"
           >
             <div className="relative overflow-hidden rounded-lg aspect-square" style={{ boxShadow: '0 0 30px rgba(74, 124, 247, 0.2)' }}>
@@ -115,7 +115,7 @@ const About = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.3 }}
           className="mb-12"
         >
           <h3 className="text-2xl font-display font-bold text-white mb-8 text-center tracking-wide uppercase">
@@ -130,7 +130,7 @@ const About = () => {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.2 }}
+                  transition={{ duration: 0.3, delay: index * 0.2 }}
                   whileHover={{ scale: 1.05 }}
                   className="text-center group"
                 >

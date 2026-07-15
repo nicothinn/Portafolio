@@ -23,7 +23,7 @@ const LoadingScreen = ({ onComplete }) => {
     <motion.div
       initial={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 0.8 }}
+      transition={{ duration: 0.4 }}
       className="fixed inset-0 z-[9999] bg-black flex items-center justify-center"
     >
       {/* Nebulosa animada de fondo */}
