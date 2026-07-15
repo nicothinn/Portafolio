@@ -51,9 +51,15 @@ const Testimonials = () => {
   return (
     <section
       id="testimonials"
-      className="py-32 px-4 sm:px-6 lg:px-8"
+      className="py-32 px-4 sm:px-6 lg:px-8 relative"
     >
-      <div className="max-w-7xl mx-auto">
+      {/* Nebulosa de fondo */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-cosmic-blue/8 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/3 left-1/4 w-96 h-96 bg-cosmic-gray/8 rounded-full blur-3xl" style={{ animationDelay: '2s' }} />
+      </div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -61,11 +67,11 @@ const Testimonials = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-6xl font-display font-bold mb-6">
-            <span className="gradient-text">Testimonials</span>
+          <h2 className="text-4xl md:text-6xl font-display font-bold mb-6 tracking-[0.1em] uppercase text-balance">
+            <span className="gradient-text">Transmissions</span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            What those who have worked with me say
+          <p className="text-xl text-cosmic-light max-w-2xl mx-auto tracking-wide">
+            Incoming messages from Earth
           </p>
         </motion.div>
 
@@ -80,24 +86,51 @@ const Testimonials = () => {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="gradient-border"
+              whileHover={{ scale: 1.05 }}
+              className="group relative"
             >
-              <div className="gradient-border-content h-full flex flex-col">
-                <Quote
-                  size={32}
-                  className="text-electric-blue mb-4"
-                />
-                <p className="text-gray-300 leading-relaxed mb-6 flex-grow">
-                  "{testimonial.content}"
-                </p>
-                <div className="border-t border-gray-800 pt-4">
-                  <div className="flex items-center gap-1 mb-2">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <span key={i} className="text-data-green text-lg">★</span>
-                    ))}
+              <div className="gradient-border h-full">
+                <div className="gradient-border-content h-full flex flex-col">
+                  {/* Radar effect */}
+                  <div className="relative mb-4">
+                    <Quote
+                      size={32}
+                      className="text-cosmic-blue"
+                    />
+                    <motion.div
+                      animate={{ scale: [1, 1.5, 1], opacity: [0.5, 0, 0.5] }}
+                      transition={{ duration: 2, repeat: Infinity }}
+                      className="absolute inset-0 rounded-full bg-cosmic-blue/20 blur-xl"
+                    />
                   </div>
-                  <p className="font-semibold text-white">{testimonial.name}</p>
-                  <p className="text-sm text-gray-400">{testimonial.role}</p>
+
+                  {/* Content */}
+                  <p className="text-gray-300 leading-relaxed mb-6 flex-grow font-light">
+                    "{testimonial.content}"
+                  </p>
+
+                  {/* Rating and Author */}
+                  <div className="border-t border-gray-800 pt-4">
+                    <div className="flex items-center gap-1 mb-2">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <motion.span
+                          key={i}
+                          initial={{ opacity: 0, scale: 0 }}
+                          whileInView={{ opacity: 1, scale: 1 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.3, delay: i * 0.1 }}
+                          className="text-cosmic-blue text-lg"
+                          style={{
+                            textShadow: '0 0 10px rgba(18, 247, 214, 0.5)'
+                          }}
+                        >
+                          ★
+                        </motion.span>
+                      ))}
+                    </div>
+                    <p className="font-semibold text-white tracking-wide">{testimonial.name}</p>
+                    <p className="text-sm text-gray-400">{testimonial.role}</p>
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -109,4 +142,3 @@ const Testimonials = () => {
 }
 
 export default Testimonials
-

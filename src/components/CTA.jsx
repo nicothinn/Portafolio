@@ -23,6 +23,7 @@ const CTA = () => {
       '_blank'
     )
   }
+
   const ctaOptions = [
     {
       title: "Let's Talk About Your Architecture",
@@ -46,26 +47,22 @@ const CTA = () => {
       icon: Mail,
       label: 'Email',
       href: 'mailto:nicoritabarona@gmail.com?subject=Contact%20from%20Portfolio&body=Hello%20Nicolas,',
-      color: 'electric-blue',
       isEmail: true,
     },
     {
       icon: Linkedin,
       label: 'LinkedIn',
       href: 'https://www.linkedin.com/in/nicolas-pe%C3%B1a-1ab37b27a/',
-      color: 'electric-blue',
     },
     {
       icon: Github,
       label: 'GitHub',
       href: 'https://github.com/nicothinn',
-      color: 'data-green',
     },
     {
       icon: MessageCircle,
       label: 'WhatsApp',
       href: 'https://wa.me/573026643175',
-      color: 'data-green',
     },
   ]
 
@@ -74,9 +71,9 @@ const CTA = () => {
       id="contact"
       className="py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden"
     >
-      {/* Background Effects */}
+      {/* Nebulosa de fondo */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-electric-blue/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cosmic-blue/8 rounded-full blur-3xl" />
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
@@ -87,11 +84,11 @@ const CTA = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-display font-bold mb-6">
-            <span className="gradient-text">Let&apos;s Talk</span>
+          <h2 className="text-4xl md:text-6xl font-display font-bold mb-6 tracking-[0.1em] uppercase text-balance">
+            <span className="gradient-text">Transmission Frequency</span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-12">
-            Ready to transform your data into valuable products? I'm here to help you.
+          <p className="text-xl text-cosmic-light max-w-2xl mx-auto tracking-wide">
+            Open communication channels
           </p>
         </motion.div>
 
@@ -107,16 +104,16 @@ const CTA = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ scale: 1.05, y: -5 }}
-                className="gradient-border block"
+                className="gradient-border block group"
               >
                 <div className="gradient-border-content text-center">
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-electric-blue/10 mb-4">
-                    <Icon size={24} className="text-electric-blue" />
+                  <div className="inline-flex items-center justify-center size-12 rounded-lg bg-cosmic-blue/10 mb-4 group-hover:bg-cosmic-blue/20 transition-colors duration-300">
+                    <Icon size={24} className="text-cosmic-blue" />
                   </div>
-                  <h3 className="text-xl font-display font-bold text-white mb-2">
+                  <h3 className="text-xl font-display font-bold text-white mb-2 tracking-wide">
                     {option.title}
                   </h3>
-                  <p className="text-gray-400 text-sm">{option.description}</p>
+                  <p className="text-cosmic-gray text-sm font-light">{option.description}</p>
                 </div>
               </motion.a>
             )
@@ -130,8 +127,8 @@ const CTA = () => {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <h3 className="text-2xl font-display font-bold text-white mb-8">
-            Let&apos;s Connect
+          <h3 className="text-2xl font-display font-bold text-white mb-8 tracking-wide uppercase">
+            Open Channels
           </h3>
           <div className="flex flex-wrap justify-center gap-6">
             {socialLinks.map((link, index) => {
@@ -144,34 +141,44 @@ const CTA = () => {
                   >
                     <motion.button
                       onClick={openGmail}
-                      className="flex items-center gap-3 px-6 py-3 rounded-lg transition-colors"
+                      className="flex items-center gap-3 px-6 py-3 rounded-lg transition-[background-color,box-shadow] duration-300"
                       style={{
-                        backgroundColor: link.color === 'electric-blue' ? 'rgba(0, 119, 255, 0.1)' : 'rgba(18, 247, 214, 0.1)',
-                        border: `1px solid ${link.color === 'electric-blue' ? 'rgba(0, 119, 255, 0.3)' : 'rgba(18, 247, 214, 0.3)'}`,
-                        color: link.color === 'electric-blue' ? '#0077FF' : '#12F7D6'
+                        backgroundColor: 'rgba(74, 124, 247, 0.1)',
+                        border: '1px solid rgba(74, 124, 247, 0.3)',
+                        color: '#4A7CF7'
                       }}
                       onMouseEnter={(e) => {
-                        e.currentTarget.style.backgroundColor = link.color === 'electric-blue' ? 'rgba(0, 119, 255, 0.2)' : 'rgba(18, 247, 214, 0.2)'
+                        e.currentTarget.style.backgroundColor = 'rgba(74, 124, 247, 0.2)'
+                        e.currentTarget.style.boxShadow = '0 0 15px rgba(74, 124, 247, 0.3)'
                       }}
                       onMouseLeave={(e) => {
-                        e.currentTarget.style.backgroundColor = link.color === 'electric-blue' ? 'rgba(0, 119, 255, 0.1)' : 'rgba(18, 247, 214, 0.1)'
+                        e.currentTarget.style.backgroundColor = 'rgba(74, 124, 247, 0.1)'
+                        e.currentTarget.style.boxShadow = 'none'
                       }}
                       whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
+                      whileTap={{ scale: 0.96 }}
                     >
                       <Icon size={20} />
-                      <span className="font-medium">{link.label}</span>
+                      <span className="font-medium tracking-wide">{link.label}</span>
                     </motion.button>
                     <motion.button
                       onClick={copyEmailToClipboard}
-                      className="flex items-center gap-2 px-4 py-3 rounded-lg transition-colors"
+                      className="flex items-center gap-2 px-4 py-3 rounded-lg transition-[background-color,box-shadow] duration-300"
                       style={{
-                        backgroundColor: 'rgba(18, 247, 214, 0.1)',
-                        border: '1px solid rgba(18, 247, 214, 0.3)',
-                        color: '#12F7D6'
+                        backgroundColor: 'rgba(139, 157, 195, 0.1)',
+                        border: '1px solid rgba(139, 157, 195, 0.3)',
+                        color: '#8B9DC3'
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.backgroundColor = 'rgba(139, 157, 195, 0.2)'
+                        e.currentTarget.style.boxShadow = '0 0 15px rgba(139, 157, 195, 0.3)'
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.backgroundColor = 'rgba(139, 157, 195, 0.1)'
+                        e.currentTarget.style.boxShadow = 'none'
                       }}
                       whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
+                      whileTap={{ scale: 0.96 }}
                       title="Copy email to clipboard"
                     >
                       {emailCopied ? <Check size={18} /> : <Copy size={18} />}
@@ -185,23 +192,25 @@ const CTA = () => {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 px-6 py-3 rounded-lg transition-colors"
+                  className="flex items-center gap-3 px-6 py-3 rounded-lg transition-[background-color,box-shadow] duration-300"
                   style={{
-                    backgroundColor: link.color === 'electric-blue' ? 'rgba(0, 119, 255, 0.1)' : 'rgba(18, 247, 214, 0.1)',
-                    border: `1px solid ${link.color === 'electric-blue' ? 'rgba(0, 119, 255, 0.3)' : 'rgba(18, 247, 214, 0.3)'}`,
-                    color: link.color === 'electric-blue' ? '#0077FF' : '#12F7D6'
+                    backgroundColor: 'rgba(74, 124, 247, 0.1)',
+                    border: '1px solid rgba(74, 124, 247, 0.3)',
+                    color: '#4A7CF7'
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.backgroundColor = link.color === 'electric-blue' ? 'rgba(0, 119, 255, 0.2)' : 'rgba(18, 247, 214, 0.2)'
+                    e.currentTarget.style.backgroundColor = 'rgba(74, 124, 247, 0.2)'
+                    e.currentTarget.style.boxShadow = '0 0 15px rgba(74, 124, 247, 0.3)'
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.backgroundColor = link.color === 'electric-blue' ? 'rgba(0, 119, 255, 0.1)' : 'rgba(18, 247, 214, 0.1)'
+                    e.currentTarget.style.backgroundColor = 'rgba(74, 124, 247, 0.1)'
+                    e.currentTarget.style.boxShadow = 'none'
                   }}
                   whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileTap={{ scale: 0.96 }}
                 >
                   <Icon size={20} />
-                  <span className="font-medium">{link.label}</span>
+                  <span className="font-medium tracking-wide">{link.label}</span>
                 </motion.a>
               )
             })}
@@ -213,4 +222,3 @@ const CTA = () => {
 }
 
 export default CTA
-

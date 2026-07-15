@@ -8,10 +8,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        'dark-blue': '#0A1128',
-        'electric-blue': '#0077FF',
-        'black': '#0D0D0D',
-        'data-green': '#12F7D6',
+        'cosmic-black': '#0A0B0F',
+        'cosmic-blue': '#4A7CF7',
+        'cosmic-gray': '#8B9DC3',
+        'cosmic-light': '#C0C5D0',
+        'cosmic-dark': '#1A1D24',
       },
       fontFamily: {
         'sans': ['Inter', 'Roboto', 'sans-serif'],
