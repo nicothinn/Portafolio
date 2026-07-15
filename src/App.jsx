@@ -20,7 +20,6 @@ import Footer from './components/Footer'
 import GalaxyBackground from './components/GalaxyBackground'
 import StarField from './components/StarField'
 import CustomCursor from './components/CustomCursor'
-import SpaceSound from './components/SpaceSound'
 import WarpSpeed from './components/WarpSpeed'
 
 function App() {
@@ -71,8 +70,6 @@ function App() {
       {/* Efectos globales */}
       <StarField />
       <CustomCursor />
-      <SpaceSound />
-
       <AnimatePresence initial={false}>
         {isLoading && <LoadingScreen onComplete={handleLoadingComplete} />}
       </AnimatePresence>
