@@ -27,12 +27,6 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  cursor: none;
-}
-
-a, button {
-  cursor: none;
-}
 
 /* Hide scrollbar - Locomotive Scroll handles it */
 ::-webkit-scrollbar {

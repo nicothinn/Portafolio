@@ -29,7 +29,7 @@ const ScrollRocket = ({ scrollYProgress }) => {
     <div ref={trackRef} className="absolute inset-0 flex flex-col items-center">
       {/* Línea de la pista */}
       <div className="absolute top-4 bottom-4 w-px bg-gradient-to-b from-transparent via-cosmic-blue/40 via-50% to-transparent" />
-      <div className="absolute top-0 bottom-0 w-6 bg-cosmic-blue/5 blur-xl rounded-full" />
+
 
       {/* Puntos decorativos */}
       {[0.1, 0.3, 0.5, 0.7, 0.9].map((pos, i) => (
